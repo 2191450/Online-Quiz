@@ -7,11 +7,9 @@ username.addEventListener("keyup", () => {
 });
 // saving the username to the localstorage
 saveUserName = (e) => {
-  //console.log("Click!!!");
   e.preventDefault();
 
   localStorage.setItem("recentName", username.value);
-  //console.log(localStorage.getItem("recentName"));
 
   //dirext to the game.html which is the quiz
   return window.location.assign("/../game/game.html");

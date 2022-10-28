@@ -54,7 +54,6 @@ function drawChart() {
 }
 
 clearScore = (e) => {
-  //console.log("Click!!!");
   e.preventDefault();
   //clear localstorage
   window.localStorage.clear();

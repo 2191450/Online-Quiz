@@ -2,7 +2,6 @@ const questionCounterText = document.getElementById("questionCounter");
 const question = document.getElementById("question");
 //choice 1-4
 const choices = Array.from(document.getElementsByClassName("choice-text"));
-//const scoreText = document.getElementById("score");c
 
 let currentQuestion = {};
 let accoptingAnswers = false;
@@ -19,7 +18,6 @@ fetch("/../questions.json")
   })
   // call the questions before trigerring start_game()
   .then((loadedQuestions) => {
-    //console.log(loadedQuestions);
     //multiple choice
     questions = loadedQuestions.MultipleChoice;
     start_game();
@@ -33,7 +31,6 @@ start_game = () => {
   score = 0;
   //... is a spread operator for the question to get all the questions from
   availableQuestions = [...questions];
-  //console.log(availableQuestions);
   get_new_question(0);
 };
 
@@ -60,12 +57,10 @@ choices.forEach((choice) => {
     accoptingAnswers = false;
     const selected_choice = e.target;
     const selected_answer = selected_choice.dataset["number"];
-    //console.log(selected_answer);
 
     //checking answers for the score
     const classToApply =
       selected_answer == currentQuestion.answer ? "correct" : "incorrect";
-    //console.log(classToApply);
     // if the anwer is correct increment score
     if (classToApply == "correct") {
       incrementScore(correct_bonus);
@@ -76,7 +71,6 @@ choices.forEach((choice) => {
       que_count++;
       get_new_question(que_count);
     } else {
-      //console.log("Complete!");
       return window.location.assign("/../game/tf.html");
     }
   });
@@ -85,6 +79,5 @@ choices.forEach((choice) => {
 incrementScore = (num) => {
   ``;
   score += num;
-  //scoreText.innerText = score;
   localStorage.setItem("mostRecentScore", score);
 };

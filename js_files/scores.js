@@ -7,4 +7,3 @@ allScore.innerHTML = scoreList
   })
   .join("");
 //clear localstorage
-//window.localStorage.clear();

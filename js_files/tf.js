@@ -60,7 +60,6 @@ choices.forEach((choice) => {
     accoptingAnswers = false;
     const selected_choice = e.target;
     const selected_answer = selected_choice.dataset["number"];
-    //console.log(selected_answer);
 
     //checking answers for the score board
     const classToApply =
@@ -76,7 +75,6 @@ choices.forEach((choice) => {
       que_count++;
       get_new_question(que_count);
     } else {
-      //console.log("Complete!");
       return window.location.assign("/../game/identification.html");
     }
   });
@@ -85,6 +83,5 @@ choices.forEach((choice) => {
 incrementScore = (num) => {
   ``;
   score += num;
-  //scoreText.innerText = score;
   localStorage.setItem("mostRecentScoreTF", score);
 };
