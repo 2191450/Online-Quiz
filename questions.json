@@ -169,7 +169,6 @@
       "answer": 4
     }
   ],
-
   "TrueOrFalse": [
     {
       "question": "JavaScript is a programming language.",
@@ -298,7 +297,6 @@
       "answer": 1
     }
   ],
-
   "Identification": [
     {
       "question": "Marquees tag works only with?",
